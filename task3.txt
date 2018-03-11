@@ -1,0 +1,21 @@
+var a:array[1..32000] of integer;
+hh,mm,ss:integer;
+begin
+read(hh,mm,ss);
+if (hh<24) and (mm<60) and (ss<60) then
+begin
+ss:=ss+1;
+if ss=60 then 
+ begin
+ ss:=00;
+ mm:=mm+1;
+ end;
+if mm=60 then 
+ begin
+ mm:=00;
+ hh:=hh+1;
+ end;
+end; 
+if hh=24 then hh:=0; 
+write(hh,':',mm,':',ss)
+end.
